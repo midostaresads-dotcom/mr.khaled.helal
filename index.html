@@ -422,6 +422,45 @@
                 padding: 20px;
             }
         }
+
+        /* Mobile background fixes: avoid position:fixed issues, ensure cover, reduce glow */
+        @media (max-width: 768px) {
+            .legendary-bg,
+            .gold-accents {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                /* allow the background to scale/crop cleanly on small screens */
+                background-attachment: scroll;
+                background-repeat: no-repeat;
+                background-size: cover;
+                height: 120%;
+                transform: translateZ(0);
+            }
+
+            .gold-accents {
+                /* soften accents on smaller screens for performance and readability */
+                background:
+                    radial-gradient(circle at 20% 20%, rgba(255, 215, 0, 0.06) 0%, transparent 40%),
+                    radial-gradient(circle at 80% 80%, rgba(255, 215, 0, 0.03) 0%, transparent 40%);
+            }
+
+            .hero-glow {
+                width: 120%;
+                height: 120%;
+                background: radial-gradient(circle, rgba(139, 92, 246, 0.06) 0%, transparent 70%);
+            }
+        }
+
+        @media (max-width: 480px) {
+            .legendary-bg,
+            .gold-accents {
+                height: 110%;
+                opacity: 0.95;
+                background-size: 180% 180%;
+            }
+        }
     </style>
 </head>
 <body>

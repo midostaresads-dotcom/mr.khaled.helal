@@ -31,68 +31,27 @@
             position: relative;
         }
 
-        /* Cosmic Background */
-        .cosmic-bg {
+        /* Legendary Static Background */
+        .legendary-bg {
             position: fixed;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            background:
-                radial-gradient(ellipse at top, rgba(16, 185, 129, 0.1) 0%, transparent 50%),
-                radial-gradient(ellipse at bottom, rgba(139, 92, 246, 0.1) 0%, transparent 50%),
-                radial-gradient(ellipse at center, rgba(236, 72, 153, 0.05) 0%, transparent 50%),
-                linear-gradient(45deg, #0f0f23 0%, #1a1a2e 25%, #16213e 50%, #0f3460 75%, #000000 100%);
+            background: linear-gradient(135deg, #2d1b69 0%, #1a0b3a 50%, #0f0a1a 100%);
             z-index: -2;
         }
 
-        .stars {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: -1;
-        }
-
-        .star {
-            position: absolute;
-            background: #ffffff;
-            border-radius: 50%;
-            animation: twinkle 3s infinite ease-in-out;
-        }
-
-        .star:nth-child(1) { width: 2px; height: 2px; top: 10%; left: 20%; animation-delay: 0s; }
-        .star:nth-child(2) { width: 1px; height: 1px; top: 20%; left: 80%; animation-delay: 0.5s; }
-        .star:nth-child(3) { width: 3px; height: 3px; top: 30%; left: 40%; animation-delay: 1s; }
-        .star:nth-child(4) { width: 1px; height: 1px; top: 50%; left: 10%; animation-delay: 1.5s; }
-        .star:nth-child(5) { width: 2px; height: 2px; top: 70%; left: 90%; animation-delay: 2s; }
-        .star:nth-child(6) { width: 1px; height: 1px; top: 80%; left: 60%; animation-delay: 2.5s; }
-        .star:nth-child(7) { width: 2px; height: 2px; top: 15%; left: 70%; animation-delay: 3s; }
-        .star:nth-child(8) { width: 1px; height: 1px; top: 85%; left: 30%; animation-delay: 3.5s; }
-        .star:nth-child(9) { width: 3px; height: 3px; top: 45%; left: 85%; animation-delay: 4s; }
-        .star:nth-child(10) { width: 1px; height: 1px; top: 65%; left: 15%; animation-delay: 4.5s; }
-
-        @keyframes twinkle {
-            0%, 100% { opacity: 0.3; transform: scale(1); }
-            50% { opacity: 1; transform: scale(1.2); }
-        }
-
-        .aurora {
+        .gold-accents {
             position: fixed;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
             background:
-                linear-gradient(45deg, rgba(16, 185, 129, 0.03) 0%, rgba(139, 92, 246, 0.03) 50%, rgba(236, 72, 153, 0.03) 100%);
-            animation: auroraShift 8s ease-in-out infinite alternate;
+                radial-gradient(circle at 20% 20%, rgba(255, 215, 0, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 80% 80%, rgba(255, 215, 0, 0.05) 0%, transparent 50%);
             z-index: -1;
-        }
-
-        @keyframes auroraShift {
-            0% { opacity: 0.3; transform: translateX(-10px) translateY(-10px); }
-            100% { opacity: 0.6; transform: translateX(10px) translateY(10px); }
         }
 
         .container {
@@ -120,12 +79,6 @@
             height: 150%;
             background: radial-gradient(circle, rgba(139, 92, 246, 0.1) 0%, transparent 70%);
             border-radius: 50%;
-            animation: heroGlow 6s ease-in-out infinite alternate;
-        }
-
-        @keyframes heroGlow {
-            0% { transform: translate(-50%, -50%) scale(0.8); opacity: 0.3; }
-            100% { transform: translate(-50%, -50%) scale(1.2); opacity: 0.6; }
         }
 
         .profile-image {
@@ -142,12 +95,6 @@
             position: relative;
             transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
             backdrop-filter: blur(20px);
-            animation: profileFloat 4s ease-in-out infinite;
-        }
-
-        @keyframes profileFloat {
-            0%, 100% { transform: translateY(0px); }
-            50% { transform: translateY(-10px); }
         }
 
         .profile-image:hover {
@@ -169,12 +116,6 @@
             text-shadow: 0 0 40px rgba(139, 92, 246, 0.3);
             letter-spacing: 3px;
             position: relative;
-            animation: nameGlow 3s ease-in-out infinite alternate;
-        }
-
-        @keyframes nameGlow {
-            0% { text-shadow: 0 0 20px rgba(139, 92, 246, 0.2); }
-            100% { text-shadow: 0 0 40px rgba(139, 92, 246, 0.4); }
         }
 
         .name::after {
@@ -187,12 +128,6 @@
             height: 6px;
             background: linear-gradient(90deg, #10b981, #8b5cf6, #ec4899);
             border-radius: 3px;
-            animation: underlineSlide 2s ease-out 1s both;
-        }
-
-        @keyframes underlineSlide {
-            from { width: 0; }
-            to { width: 120px; }
         }
 
         .description {
@@ -203,7 +138,6 @@
             line-height: 1.8;
             font-weight: 300;
             color: #e2e8f0;
-            animation: fadeInUp 1s ease-out 0.5s both;
         }
 
         /* Social Section */
@@ -221,12 +155,6 @@
             -webkit-text-fill-color: transparent;
             background-clip: text;
             position: relative;
-            animation: titlePulse 2s ease-in-out infinite;
-        }
-
-        @keyframes titlePulse {
-            0%, 100% { transform: scale(1); }
-            50% { transform: scale(1.05); }
         }
 
         .social-title::before {
@@ -236,14 +164,6 @@
             left: 50%;
             transform: translateX(-50%);
             font-size: 2.5rem;
-            animation: sparkle 3s ease-in-out infinite;
-        }
-
-        @keyframes sparkle {
-            0%, 100% { transform: translateX(-50%) scale(1) rotate(0deg); opacity: 0.7; }
-            25% { transform: translateX(-50%) scale(1.2) rotate(90deg); opacity: 1; }
-            50% { transform: translateX(-50%) scale(1) rotate(180deg); opacity: 0.7; }
-            75% { transform: translateX(-50%) scale(1.2) rotate(270deg); opacity: 1; }
         }
 
         .social-grid {
@@ -264,25 +184,6 @@
             position: relative;
             overflow: hidden;
             cursor: pointer;
-            animation: cardSlideIn 1s ease-out both;
-        }
-
-        .social-card:nth-child(1) { animation-delay: 0.1s; }
-        .social-card:nth-child(2) { animation-delay: 0.2s; }
-        .social-card:nth-child(3) { animation-delay: 0.3s; }
-        .social-card:nth-child(4) { animation-delay: 0.4s; }
-        .social-card:nth-child(5) { animation-delay: 0.5s; }
-        .social-card:nth-child(6) { animation-delay: 0.6s; }
-
-        @keyframes cardSlideIn {
-            from {
-                opacity: 0;
-                transform: translateY(50px) scale(0.9);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0) scale(1);
-            }
         }
 
         .social-card::before {
@@ -347,12 +248,6 @@
             text-align: center;
             position: relative;
             overflow: hidden;
-            animation: whatsappGlow 4s ease-in-out infinite alternate;
-        }
-
-        @keyframes whatsappGlow {
-            0% { box-shadow: 0 0 30px rgba(16, 185, 129, 0.2); }
-            100% { box-shadow: 0 0 50px rgba(16, 185, 129, 0.4); }
         }
 
         .whatsapp-section::before {
@@ -363,12 +258,6 @@
             width: 200%;
             height: 200%;
             background: radial-gradient(circle, rgba(16, 185, 129, 0.1) 0%, transparent 70%);
-            animation: whatsappRotate 15s linear infinite;
-        }
-
-        @keyframes whatsappRotate {
-            from { transform: rotate(0deg); }
-            to { transform: rotate(360deg); }
         }
 
         .whatsapp-title {
@@ -463,16 +352,6 @@
         }
 
         /* Animations */
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
 
         /* Responsive Design */
         @media (max-width: 768px) {
@@ -546,20 +425,8 @@
     </style>
 </head>
 <body>
-    <div class="cosmic-bg"></div>
-    <div class="aurora"></div>
-    <div class="stars">
-        <div class="star"></div>
-        <div class="star"></div>
-        <div class="star"></div>
-        <div class="star"></div>
-        <div class="star"></div>
-        <div class="star"></div>
-        <div class="star"></div>
-        <div class="star"></div>
-        <div class="star"></div>
-        <div class="star"></div>
-    </div>
+    <div class="legendary-bg"></div>
+    <div class="gold-accents"></div>
 
     <div class="container">
         <!-- Hero Section -->

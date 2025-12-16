@@ -459,14 +459,16 @@
             .gold-accents {
                 position: absolute;
                 top: 0;
-                left: 0;
-                width: 100%;
+                left: 50%;
+                transform: translateX(-50%) translateZ(0);
+                /* increase width so edges never show on narrow screens */
+                width: 140%;
                 /* allow the background to scale/crop cleanly on small screens */
                 background-attachment: scroll;
                 background-repeat: no-repeat;
                 background-size: cover;
+                background-position: center center;
                 height: 120%;
-                transform: translateZ(0);
             }
 
             .gold-accents {
@@ -486,9 +488,13 @@
         @media (max-width: 480px) {
             .legendary-bg,
             .gold-accents {
+                left: 50%;
+                transform: translateX(-50%);
+                width: 150%;
                 height: 110%;
                 opacity: 0.95;
                 background-size: 180% 180%;
+                background-position: center center;
             }
         }
     </style>

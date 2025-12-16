@@ -39,6 +39,10 @@
             width: 100%;
             height: 100%;
             background: linear-gradient(135deg, #2d1b69 0%, #1a0b3a 50%, #0f0a1a 100%);
+            /* ensure the gradient centers and covers on all viewports */
+            background-position: center center;
+            background-size: cover;
+            min-height: 100vh;
             z-index: -2;
         }
 
@@ -51,6 +55,9 @@
             background:
                 radial-gradient(circle at 20% 20%, rgba(255, 215, 0, 0.1) 0%, transparent 50%),
                 radial-gradient(circle at 80% 80%, rgba(255, 215, 0, 0.05) 0%, transparent 50%);
+            background-position: center center;
+            background-size: cover;
+            min-height: 100vh;
             z-index: -1;
         }
 
@@ -356,7 +363,7 @@
         /* Responsive Design */
         @media (max-width: 768px) {
             .container {
-                padding: 15px;
+                padding: 15px 18px; /* more horizontal padding to keep content centered */
             }
 
             .hero {
@@ -379,10 +386,13 @@
             .social-grid {
                 grid-template-columns: 1fr;
                 gap: 30px;
+                justify-items: center; /* center cards within grid */
             }
 
             .social-card {
                 padding: 30px;
+                width: 100%;
+                max-width: 520px; /* prevent cards from stretching too wide */
             }
 
             .social-icon {
@@ -392,10 +402,30 @@
             .whatsapp-grid {
                 grid-template-columns: 1fr;
                 gap: 20px;
+                justify-items: center; /* center whatsapp cards */
+            }
+
+            .whatsapp-card {
+                width: 100%;
+                max-width: 420px;
             }
 
             .social-title, .whatsapp-title {
                 font-size: 2.2rem;
+                text-align: center; /* explicit center for titles */
+            }
+
+            /* make background elements cover without overextending */
+            .legendary-bg,
+            .gold-accents {
+                position: absolute;
+                top: 0;
+                left: 50%;
+                transform: translateX(-50%);
+                width: 110%;
+                height: 100vh;
+                background-position: center center;
+                background-size: cover;
             }
         }
 

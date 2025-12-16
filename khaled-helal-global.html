@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>خالد هلال - مدرس كيمياء</title>
+    <meta name="description" content="خالد هلال، مدرس كيمياء متخصص في شرح منهج الثانوية العامة بأسلوب سهل وبسيط.">
+    <meta name="keywords" content="خالد هلال, كيمياء, ثانوية عامة, مدرس, تعليم">
+    <meta name="author" content="خالد هلال">
+    <meta property="og:title" content="خالد هلال - مدرس كيمياء">
+    <meta property="og:description" content="مدرس كيمياء معروف بأسلوبه السهل والبسيط.">
+    <meta property="og:image" content="images/11.jpg">
+    <meta property="og:url" content="https://mrkhaledhelal.com">
+    <meta property="og:type" content="website">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🧪</text></svg>" type="image/svg+xml">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #000000;
+            color: #ffffff;
+            line-height: 1.6;
+            min-height: 100vh;
+            overflow-x: hidden;
+            position: relative;
+        }
+
+        /* Cosmic Background */
+        .cosmic-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background:
+                radial-gradient(ellipse at top, rgba(16, 185, 129, 0.1) 0%, transparent 50%),
+                radial-gradient(ellipse at bottom, rgba(139, 92, 246, 0.1) 0%, transparent 50%),
+                radial-gradient(ellipse at center, rgba(236, 72, 153, 0.05) 0%, transparent 50%),
+                linear-gradient(45deg, #0f0f23 0%, #1a1a2e 25%, #16213e 50%, #0f3460 75%, #000000 100%);
+            z-index: -2;
+        }
+
+        .stars {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+
+        .star {
+            position: absolute;
+            background: #ffffff;
+            border-radius: 50%;
+            animation: twinkle 3s infinite ease-in-out;
+        }
+
+        .star:nth-child(1) { width: 2px; height: 2px; top: 10%; left: 20%; animation-delay: 0s; }
+        .star:nth-child(2) { width: 1px; height: 1px; top: 20%; left: 80%; animation-delay: 0.5s; }
+        .star:nth-child(3) { width: 3px; height: 3px; top: 30%; left: 40%; animation-delay: 1s; }
+        .star:nth-child(4) { width: 1px; height: 1px; top: 50%; left: 10%; animation-delay: 1.5s; }
+        .star:nth-child(5) { width: 2px; height: 2px; top: 70%; left: 90%; animation-delay: 2s; }
+        .star:nth-child(6) { width: 1px; height: 1px; top: 80%; left: 60%; animation-delay: 2.5s; }
+        .star:nth-child(7) { width: 2px; height: 2px; top: 15%; left: 70%; animation-delay: 3s; }
+        .star:nth-child(8) { width: 1px; height: 1px; top: 85%; left: 30%; animation-delay: 3.5s; }
+        .star:nth-child(9) { width: 3px; height: 3px; top: 45%; left: 85%; animation-delay: 4s; }
+        .star:nth-child(10) { width: 1px; height: 1px; top: 65%; left: 15%; animation-delay: 4.5s; }
+
+        @keyframes twinkle {
+            0%, 100% { opacity: 0.3; transform: scale(1); }
+            50% { opacity: 1; transform: scale(1.2); }
+        }
+
+        .aurora {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background:
+                linear-gradient(45deg, rgba(16, 185, 129, 0.03) 0%, rgba(139, 92, 246, 0.03) 50%, rgba(236, 72, 153, 0.03) 100%);
+            animation: auroraShift 8s ease-in-out infinite alternate;
+            z-index: -1;
+        }
+
+        @keyframes auroraShift {
+            0% { opacity: 0.3; transform: translateX(-10px) translateY(-10px); }
+            100% { opacity: 0.6; transform: translateX(10px) translateY(10px); }
+        }
+
+        .container {
+            max-width: 1200px;
+            width: 100%;
+            margin: 0 auto;
+            padding: 20px;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Hero Section */
+        .hero {
+            text-align: center;
+            padding: 80px 30px 60px;
+            position: relative;
+        }
+
+        .hero-glow {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 150%;
+            height: 150%;
+            background: radial-gradient(circle, rgba(139, 92, 246, 0.1) 0%, transparent 70%);
+            border-radius: 50%;
+            animation: heroGlow 6s ease-in-out infinite alternate;
+        }
+
+        @keyframes heroGlow {
+            0% { transform: translate(-50%, -50%) scale(0.8); opacity: 0.3; }
+            100% { transform: translate(-50%, -50%) scale(1.2); opacity: 0.6; }
+        }
+
+        .profile-image {
+            width: 220px;
+            height: 220px;
+            border-radius: 50%;
+            border: 10px solid rgba(255, 255, 255, 0.1);
+            box-shadow:
+                0 25px 50px rgba(0, 0, 0, 0.5),
+                0 0 0 30px rgba(139, 92, 246, 0.1),
+                inset 0 0 0 10px rgba(255, 255, 255, 0.05);
+            object-fit: cover;
+            margin-bottom: 40px;
+            position: relative;
+            transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            backdrop-filter: blur(20px);
+            animation: profileFloat 4s ease-in-out infinite;
+        }
+
+        @keyframes profileFloat {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+        }
+
+        .profile-image:hover {
+            transform: scale(1.1) rotate(5deg);
+            box-shadow:
+                0 35px 70px rgba(0, 0, 0, 0.6),
+                0 0 0 40px rgba(139, 92, 246, 0.2),
+                inset 0 0 0 10px rgba(255, 255, 255, 0.1);
+        }
+
+        .name {
+            font-size: 4rem;
+            font-weight: 900;
+            margin-bottom: 25px;
+            background: linear-gradient(135deg, #ffffff 0%, #e0e7ff 30%, #c7d2fe 60%, #a5b4fc 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-shadow: 0 0 40px rgba(139, 92, 246, 0.3);
+            letter-spacing: 3px;
+            position: relative;
+            animation: nameGlow 3s ease-in-out infinite alternate;
+        }
+
+        @keyframes nameGlow {
+            0% { text-shadow: 0 0 20px rgba(139, 92, 246, 0.2); }
+            100% { text-shadow: 0 0 40px rgba(139, 92, 246, 0.4); }
+        }
+
+        .name::after {
+            content: '';
+            position: absolute;
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 120px;
+            height: 6px;
+            background: linear-gradient(90deg, #10b981, #8b5cf6, #ec4899);
+            border-radius: 3px;
+            animation: underlineSlide 2s ease-out 1s both;
+        }
+
+        @keyframes underlineSlide {
+            from { width: 0; }
+            to { width: 120px; }
+        }
+
+        .description {
+            font-size: 1.5rem;
+            opacity: 0.9;
+            max-width: 900px;
+            margin: 0 auto 50px;
+            line-height: 1.8;
+            font-weight: 300;
+            color: #e2e8f0;
+            animation: fadeInUp 1s ease-out 0.5s both;
+        }
+
+        /* Social Section */
+        .social-section {
+            padding: 80px 0;
+        }
+
+        .social-title {
+            text-align: center;
+            font-size: 3rem;
+            font-weight: 800;
+            margin-bottom: 60px;
+            background: linear-gradient(135deg, #10b981, #8b5cf6, #ec4899);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            position: relative;
+            animation: titlePulse 2s ease-in-out infinite;
+        }
+
+        @keyframes titlePulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+
+        .social-title::before {
+            content: '✨';
+            position: absolute;
+            top: -30px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 2.5rem;
+            animation: sparkle 3s ease-in-out infinite;
+        }
+
+        @keyframes sparkle {
+            0%, 100% { transform: translateX(-50%) scale(1) rotate(0deg); opacity: 0.7; }
+            25% { transform: translateX(-50%) scale(1.2) rotate(90deg); opacity: 1; }
+            50% { transform: translateX(-50%) scale(1) rotate(180deg); opacity: 0.7; }
+            75% { transform: translateX(-50%) scale(1.2) rotate(270deg); opacity: 1; }
+        }
+
+        .social-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 40px;
+            margin-bottom: 80px;
+        }
+
+        .social-card {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(30px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 30px;
+            padding: 40px;
+            text-align: center;
+            transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            position: relative;
+            overflow: hidden;
+            cursor: pointer;
+            animation: cardSlideIn 1s ease-out both;
+        }
+
+        .social-card:nth-child(1) { animation-delay: 0.1s; }
+        .social-card:nth-child(2) { animation-delay: 0.2s; }
+        .social-card:nth-child(3) { animation-delay: 0.3s; }
+        .social-card:nth-child(4) { animation-delay: 0.4s; }
+        .social-card:nth-child(5) { animation-delay: 0.5s; }
+        .social-card:nth-child(6) { animation-delay: 0.6s; }
+
+        @keyframes cardSlideIn {
+            from {
+                opacity: 0;
+                transform: translateY(50px) scale(0.9);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0) scale(1);
+            }
+        }
+
+        .social-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+            transition: left 0.8s;
+        }
+
+        .social-card:hover::before {
+            left: 100%;
+        }
+
+        .social-card:hover {
+            transform: translateY(-20px) scale(1.05);
+            box-shadow:
+                0 30px 60px rgba(0, 0, 0, 0.4),
+                0 0 0 1px rgba(255, 255, 255, 0.2),
+                inset 0 0 0 1px rgba(255, 255, 255, 0.1);
+            background: rgba(255, 255, 255, 0.08);
+        }
+
+        .social-link {
+            text-decoration: none;
+            color: inherit;
+            display: block;
+            position: relative;
+            z-index: 2;
+        }
+
+        .social-icon {
+            font-size: 4rem;
+            margin-bottom: 25px;
+            display: block;
+            transition: all 0.4s ease;
+            filter: drop-shadow(0 0 15px rgba(255, 255, 255, 0.2));
+        }
+
+        .social-card:hover .social-icon {
+            transform: scale(1.3) rotate(10deg);
+            filter: drop-shadow(0 0 30px rgba(255, 255, 255, 0.4));
+        }
+
+        .social-name {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 15px;
+            color: #ffffff;
+        }
+
+        /* WhatsApp Special Section */
+        .whatsapp-section {
+            background: linear-gradient(135deg, rgba(16, 185, 129, 0.1), rgba(21, 128, 61, 0.1));
+            border: 2px solid rgba(16, 185, 129, 0.3);
+            border-radius: 30px;
+            padding: 60px 40px;
+            margin: 60px 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            animation: whatsappGlow 4s ease-in-out infinite alternate;
+        }
+
+        @keyframes whatsappGlow {
+            0% { box-shadow: 0 0 30px rgba(16, 185, 129, 0.2); }
+            100% { box-shadow: 0 0 50px rgba(16, 185, 129, 0.4); }
+        }
+
+        .whatsapp-section::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(16, 185, 129, 0.1) 0%, transparent 70%);
+            animation: whatsappRotate 15s linear infinite;
+        }
+
+        @keyframes whatsappRotate {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        .whatsapp-title {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: #10b981;
+            margin-bottom: 30px;
+            position: relative;
+            z-index: 2;
+            text-shadow: 0 0 20px rgba(16, 185, 129, 0.3);
+        }
+
+        .whatsapp-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .whatsapp-card {
+            background: rgba(16, 185, 129, 0.1);
+            border: 2px solid rgba(16, 185, 129, 0.3);
+            border-radius: 20px;
+            padding: 30px;
+            transition: all 0.4s ease;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .whatsapp-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(16, 185, 129, 0.2), transparent);
+            transition: left 0.6s;
+        }
+
+        .whatsapp-card:hover::before {
+            left: 100%;
+        }
+
+        .whatsapp-card:hover {
+            background: rgba(16, 185, 129, 0.2);
+            transform: translateY(-10px) scale(1.05);
+            box-shadow: 0 20px 40px rgba(16, 185, 129, 0.3);
+            border-color: #10b981;
+        }
+
+        .whatsapp-link {
+            text-decoration: none;
+            color: inherit;
+            display: block;
+        }
+
+        .whatsapp-icon {
+            font-size: 3rem;
+            color: #10b981;
+            margin-bottom: 15px;
+            transition: all 0.3s ease;
+        }
+
+        .whatsapp-card:hover .whatsapp-icon {
+            transform: scale(1.2);
+            color: #34d399;
+        }
+
+        .whatsapp-label {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: #ffffff;
+        }
+
+        /* Footer */
+        .footer {
+            text-align: center;
+            padding: 40px;
+            background: rgba(0, 0, 0, 0.5);
+            backdrop-filter: blur(20px);
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            margin-top: 80px;
+        }
+
+        .footer p {
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 1.1rem;
+            font-weight: 300;
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .container {
+                padding: 15px;
+            }
+
+            .hero {
+                padding: 60px 20px 40px;
+            }
+
+            .profile-image {
+                width: 180px;
+                height: 180px;
+            }
+
+            .name {
+                font-size: 2.8rem;
+            }
+
+            .description {
+                font-size: 1.2rem;
+            }
+
+            .social-grid {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+
+            .social-card {
+                padding: 30px;
+            }
+
+            .social-icon {
+                font-size: 3rem;
+            }
+
+            .whatsapp-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            .social-title, .whatsapp-title {
+                font-size: 2.2rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .name {
+                font-size: 2.2rem;
+                letter-spacing: 2px;
+            }
+
+            .description {
+                font-size: 1rem;
+            }
+
+            .social-title, .whatsapp-title {
+                font-size: 1.8rem;
+            }
+
+            .profile-image {
+                width: 150px;
+                height: 150px;
+            }
+
+            .social-card, .whatsapp-card {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="cosmic-bg"></div>
+    <div class="aurora"></div>
+    <div class="stars">
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+    </div>
+
+    <div class="container">
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-glow"></div>
+            <img src="images/11.jpg" alt="خالد هلال" class="profile-image">
+            <h1 class="name">خالد هلال</h1>
+            <p class="description">
+                مدرس كيمياء متخصص يتميز بأسلوبه السلس والواضح في شرح المواد العلمية المعقدة، مما يجعل التعلم ممتعاً ومفهوماً للجميع.
+            </p>
+        </section>
+
+        <!-- Social Media Section -->
+        <section class="social-section">
+            <h2 class="social-title">منصات التواصل</h2>
+            <div class="social-grid">
+                <div class="social-card">
+                    <a href="https://www.facebook.com/Sir.Khaled.Helal.Chemistry" target="_blank" rel="noopener noreferrer" class="social-link">
+                        <i class="fab fa-facebook-f social-icon" style="color: #1877f2;"></i>
+                        <div class="social-name">فيسبوك</div>
+                    </a>
+                </div>
+
+                <div class="social-card">
+                    <a href="https://youtube.com/@khaledhelal1" target="_blank" rel="noopener noreferrer" class="social-link">
+                        <i class="fab fa-youtube social-icon" style="color: #ff0000;"></i>
+                        <div class="social-name">يوتيوب</div>
+                    </a>
+                </div>
+
+                <div class="social-card">
+                    <a href="https://www.instagram.com/mr_khaled__helal/" target="_blank" rel="noopener noreferrer" class="social-link">
+                        <i class="fab fa-instagram social-icon" style="color: #e4405f;"></i>
+                        <div class="social-name">إنستجرام</div>
+                    </a>
+                </div>
+
+                <div class="social-card">
+                    <a href="https://t.me/+VP_QdwzqX23TenEJ" target="_blank" rel="noopener noreferrer" class="social-link">
+                        <i class="fab fa-telegram-plane social-icon" style="color: #0088cc;"></i>
+                        <div class="social-name">تيليجرام</div>
+                    </a>
+                </div>
+
+                <div class="social-card">
+                    <a href="https://www.tiktok.com/@khledhelal93" target="_blank" rel="noopener noreferrer" class="social-link">
+                        <i class="fab fa-tiktok social-icon" style="color: #000000;"></i>
+                        <div class="social-name">تيك توك</div>
+                    </a>
+                </div>
+
+                <div class="social-card">
+                    <a href="https://mrkhaledhelal.com/" target="_blank" rel="noopener noreferrer" class="social-link">
+                        <i class="fas fa-globe social-icon" style="color: #4facfe;"></i>
+                        <div class="social-name">الموقع الرسمي</div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- WhatsApp Section -->
+        <section class="whatsapp-section">
+            <h2 class="whatsapp-title">تواصل عبر واتساب</h2>
+            <div class="whatsapp-grid">
+                <div class="whatsapp-card">
+                    <a href="https://wa.me/201026553713" target="_blank" rel="noopener noreferrer" class="whatsapp-link">
+                        <i class="fab fa-whatsapp whatsapp-icon"></i>
+                        <div class="whatsapp-label">واتساب 1</div>
+                    </a>
+                </div>
+
+                <div class="whatsapp-card">
+                    <a href="https://wa.me/201030475662" target="_blank" rel="noopener noreferrer" class="whatsapp-link">
+                        <i class="fab fa-whatsapp whatsapp-icon"></i>
+                        <div class="whatsapp-label">واتساب 2</div>
+                    </a>
+                </div>
+
+                <div class="whatsapp-card">
+                    <a href="https://wa.me/201014690302" target="_blank" rel="noopener noreferrer" class="whatsapp-link">
+                        <i class="fab fa-whatsapp whatsapp-icon"></i>
+                        <div class="whatsapp-label">واتساب 3</div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>&copy; 2026 Khaled Helal. All rights reserved.</p>
+        </footer>
+    </div>
+</body>
+</html>
